@@ -28,12 +28,57 @@
         su objetivo es el mismo sin embargo las unicas diferencias son la forma en que se visualizan
         y ordenan los elementos internos
     -->
-    
+
     <!--
         en wpf se puede trabajar mediante el xaml o bien mediante el codigo de c# 
         esto permite a los desarrolladores o bien diseniadores separar la parte estetica de la parte
         logica 
-    
+        
+        acontinuacion se utilizaran diversos controles de disenio para mostrar sus doferencias 
     -->
+
+
+    <!-- teoricamente al canvas se le debe indicar su posicion absoluta 
     
+    <Canvas Width="200" Height="300">
+        <TextBlock Name="txtA" Background="Blue"  Width="100" Height="100" Margin="0,0,417,219"
+                   HorizontalAlignment="Right">
+            esta es una area de texto
+        </TextBlock>
+        
+        <TextBox Name="textb" Background="Red" Width="50" Height="50" Margin="200,10" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+        </TextBox>
+    </Canvas>
+   -->
+
+    <!-- los docpanel permite usar posiciones relativas, la propiedad margin no tiene efecto >
+    <DockPanel >
+        <TextBox Width="100" Height="100" Background="Red" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBox>
+        <TextBox Width="100" Height="100" Background="Blue" Margin ="0,0"></TextBox>
+        <TextBox Width="100" Height="100" Background="Blue"  VerticalAlignment="Bottom" HorizontalAlignment="Right"></TextBox>
+        
+    </DockPanel>
+    -->
+
+    <!-- los elementos stakc panel permiten crear una agrupacion en forma de pila ya sea horizontal o verticalemte
+         la visualizacion de  los elementos dependen unicamente del orden en que hallan sido agregados 
+    <StackPanel HorizontalAlignment="Right">
+        <TextBox Background="Red" Height="100" Width="100"></TextBox>
+        <TextBox Background="Blue" Height="100" Width="100"></TextBox>
+        <TextBox Background="Green" Height="100" Width="100" VerticalAlignment="Top"></TextBox>
+    </StackPanel>
+    -->
+
+    <!-- el grid representa una tabla, semejante a las del html, cuyas celdas pueden contener uno 
+         o varios ellementos del formulario tambien pueden ser fusionadas o divididas, los elemtos primarios 
+         no son sensibles al margin, es decir su posicin es absoluta -->
+    <Grid Height="200" Width="300">
+
+
+        <TextBlock Background="red" Height="100" Width="100"   HorizontalAlignment="Left" ></TextBlock>
+        <TextBlock Background="Blue" Height="100" Width="100"  HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Background="green" Height="100" Width="100" HorizontalAlignment="Right" ></TextBlock>
+    
+    
+    </Grid>
 </Window>
