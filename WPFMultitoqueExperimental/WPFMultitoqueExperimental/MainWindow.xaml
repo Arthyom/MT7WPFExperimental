@@ -29,4 +29,11 @@
         y ordenan los elementos internos
     -->
     
+    <!--
+        en wpf se puede trabajar mediante el xaml o bien mediante el codigo de c# 
+        esto permite a los desarrolladores o bien diseniadores separar la parte estetica de la parte
+        logica 
+    
+    -->
+    
 </Window>
