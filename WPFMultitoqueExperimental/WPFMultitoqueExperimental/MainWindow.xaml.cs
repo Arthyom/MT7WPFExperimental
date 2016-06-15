@@ -23,5 +23,11 @@ namespace WPFMultitoqueExperimental
         {
             InitializeComponent();
         }
+
+        /// creacion de un evento para manejar el click del boton 
+        public void myClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("haciendo Clisk");
+        }
     }
 }

@@ -72,13 +72,17 @@
     <!-- el grid representa una tabla, semejante a las del html, cuyas celdas pueden contener uno 
          o varios ellementos del formulario tambien pueden ser fusionadas o divididas, los elemtos primarios 
          no son sensibles al margin, es decir su posicin es absoluta -->
-    <Grid Height="200" Width="300">
-
-
+    <Grid Name="grid" Height="200" Width="300">
         <TextBlock Background="red" Height="100" Width="100"   HorizontalAlignment="Left" ></TextBlock>
         <TextBlock Background="Blue" Height="100" Width="100"  HorizontalAlignment="Center"></TextBlock>
         <TextBlock Background="green" Height="100" Width="100" HorizontalAlignment="Right" ></TextBlock>
-    
-    
+        
+        <!-- el xaml permite crear objetos o controles y asignarles un evento de una forma simple
+             la definicion del objeto se puede llevar acabo mediante el xaml, mientras que la parte
+             logica, la programacion, puede hacerse por separado en el archivo de c# 
+        -->
+        <Button Background="Pink" Width="50" Height="50" VerticalAlignment="Bottom" Click="myClick"> 
+            btn1 
+        </Button>
     </Grid>
 </Window>
