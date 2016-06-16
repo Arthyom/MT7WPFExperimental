@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFMultitoqueExperimental"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
 
     <!-- 
         wpf es una tecnologia de graficos vectoriales, capaz de crear elementos en 2d, 3d y otorga un 
@@ -76,13 +76,32 @@
         <TextBlock Background="red" Height="100" Width="100"   HorizontalAlignment="Left" ></TextBlock>
         <TextBlock Background="Blue" Height="100" Width="100"  HorizontalAlignment="Center"></TextBlock>
         <TextBlock Background="green" Height="100" Width="100" HorizontalAlignment="Right" ></TextBlock>
-        
+
         <!-- el xaml permite crear objetos o controles y asignarles un evento de una forma simple
              la definicion del objeto se puede llevar acabo mediante el xaml, mientras que la parte
              logica, la programacion, puede hacerse por separado en el archivo de c# 
         -->
-        <Button Background="Pink" Width="50" Height="50" VerticalAlignment="Bottom" Click="myClick"> 
-            btn1 
+        <Button Background="Pink" Width="50" Height="50" VerticalAlignment="Bottom" Click="myClick">
+            btn1
         </Button>
+
+        <!--
+            continuado con el uso del xmal, se debe hablar de la simplificacion que realiza y permite 
+            al crear y declarar diversos elementos de una forma sumamente sencialla, declararemos una 
+            caja de lista y agregaremos elementos mediante sus propiedades principales 
+        -->
+        <ListBox Name="lista" Width="50" Height="50" >
+            <ListBox.Items>
+                <ListBoxItem>item1</ListBoxItem>
+                <ListBoxItem>item2</ListBoxItem>
+                <ListBoxItem>item3</ListBoxItem>
+            </ListBox.Items>
+        </ListBox>
+
+
+        <!-- acontinuacion se usaran algunas otras erramienteas del wpf -->
+        <Label Background="red" Width="100" Height="20" VerticalAlignment="Top" Foreground="Blue">esta es una etiqueta</Label>
+        <StatusBar Height="30" Margin="0,170,10,0" Background="Orange" >estado de la barra</StatusBar>
+
     </Grid>
 </Window>
