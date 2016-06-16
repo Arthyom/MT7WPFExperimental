@@ -101,7 +101,11 @@
 
         <!-- acontinuacion se usaran algunas otras erramienteas del wpf -->
         <Label Background="red" Width="100" Height="20" VerticalAlignment="Top" Foreground="Blue">esta es una etiqueta</Label>
-        <StatusBar Height="30" Margin="0,170,10,0" Background="Orange" >estado de la barra</StatusBar>
-
+        <StatusBar Height="30" Margin="0,170,10,0" Background="Orange" Visibility="Visible">estado de la barra</StatusBar>
+        <Button VerticalAlignment="Top" Height="100" Width="100" Visibility="Visible" FlowDirection="LeftToRight" Background="Red" Click="Button_Click" 
+                RenderTransformOrigin="0.2, 34"
+                >
+            hola k ase 
+        </Button>
     </Grid>
 </Window>

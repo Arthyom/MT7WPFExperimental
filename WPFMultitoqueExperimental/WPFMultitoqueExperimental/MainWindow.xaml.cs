@@ -55,5 +55,10 @@ namespace WPFMultitoqueExperimental
             this.grid.Children.Add(L1);
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("oprimiendo el boton");
+        }
     }
 }
