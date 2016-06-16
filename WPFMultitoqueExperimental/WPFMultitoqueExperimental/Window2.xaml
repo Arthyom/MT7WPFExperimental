@@ -34,6 +34,7 @@
         
         <!-- trabajar con cada celda -->
         <Label Grid.Row="0" Grid.Column="2" Background="Red"></Label>
-        
+        <Label Grid.RowSpan="1" Grid.ColumnSpan="2" Background="Green"></Label>
+        <TextBlock Foreground="White" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3"  Background="Black"></TextBlock>
     </Grid>
 </Window>
