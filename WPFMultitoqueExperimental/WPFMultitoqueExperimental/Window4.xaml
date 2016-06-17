@@ -11,8 +11,25 @@
         de un stakpanel y un grid, permitiendo crear columnas, filas 
         y agregar elementos en orden de una pila
     -->
-    <WrapPanel Background="Red">
-        
+    <!-- 
+    <WrapPanel Background="Red" ItemHeight="70" ItemWidth="50">
+        <Label Background="Blue" Height="30" Width="30"></Label>
+        <Label Background="Green" Height="30" Width="30"></Label>
+        <Label Background="Yellow" Height="30" Width="30"></Label>
+        <Label Background="Blue" Height="30" Width="30"></Label>
+        <Label Background="Green" Height="30" Width="30"></Label>
+        <Label Background="Yellow" Height="30" Width="30"></Label>
+        <Label Background="Blue" Height="30" Width="30"></Label>
+        <Label Background="Green" Height="30" Width="30"></Label>
+        <Label Background="Yellow" Height="30" Width="30"></Label>
+        <Label Background="Blue" Height="30" Width="30"></Label>
+        <Label Background="Green" Height="30" Width="30"></Label>
+        <Label Background="Blue" Height="30" Width="30"></Label>
+        <Label Background="Green" Height="30" Width="30"></Label>
+        <Label Background="Yellow" Height="30" Width="30"></Label>
+        <Label Background="Yellow" Height="30" Width="30"></Label>
     </WrapPanel>
-    
+    -->
+    <TabPanel Background="Red"></TabPanel>
+
 </Window>

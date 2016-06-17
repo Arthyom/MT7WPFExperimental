@@ -33,7 +33,19 @@
     -->
 
     <StackPanel Background="Black" Orientation="Horizontal">
-        
+        <Label Background="Red" Width="20"> </Label>
+        <Label Background="Yellow" Width="20"></Label>
+        <Label Background="Red" Width="20"></Label>
+        <Label Background="Yellow" Width="20"></Label>
+        <Label Background="Red" Width="20"></Label>
+        <Label Background="Yellow" Width="20"></Label>
+        <Label Background="Red" Width="20"></Label>
+        <Label Background="Red" Width="20"></Label>
+        <Label Background="Yellow" Width="20"></Label>
+        <Label Background="Red" Width="20"></Label>
+        <Label Background="Yellow" Width="20"></Label>
+        <Label Background="Red" Width="20"></Label>
+        <Label Background="Yellow" Width="20"></Label>
     </StackPanel>
     
     
