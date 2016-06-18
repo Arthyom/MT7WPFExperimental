@@ -37,7 +37,7 @@ namespace WPFMultitoqueExperimental
             this.cnv1.CaptureTouch(e.TouchDevice);
 
             // crear una nueva imagen para un nuevo toque 
-            Image MarcaDedo = new Image { Source = new BitmapImage( new Uri("pack://application:,,,/fingerprint.png")) };
+            Image MarcaDedo = new Image { Source = new BitmapImage( new Uri(@"C:\Users\frodo\Pictures\Nueva carpeta\pencil-icon.png")) };
 
             // mover la imagen al punto de toque
             TouchPoint PuntoToque = e.GetTouchPoint(this.cnv1);
