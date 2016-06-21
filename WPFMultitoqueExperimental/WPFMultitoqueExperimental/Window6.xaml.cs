@@ -50,10 +50,11 @@ namespace WPFMultitoqueExperimental
         {
             Button ObjetoClik = (Button)sender;
             string CadenaDisp = lbl_display.Content.ToString();
+           // MessageBox.Show(ObjetoClik.ToString());
 
             try
             {
-                if (Convert.ToInt32(ObjetoClik.Content) >= 0 && Convert.ToInt32(ObjetoClik.Content) <= 9)
+                if ( ObjetoClik.Background == Brushes.Red ) 
                 {
                     CadenaDisp += ObjetoClik.Content.ToString();
                     lbl_display.Content = CadenaDisp;

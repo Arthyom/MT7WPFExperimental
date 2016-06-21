@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Window6" Height="300" Width="300" Loaded="Window_Loaded">
     <!-- calculadora con grid -->
-    <Grid Name="g1" Background="Gray" Margin="10,17,18,10">
-        
+    <Grid Name="g1" Background="Green" Margin="10,17,18,10">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -24,10 +24,10 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <!-- modificar controles -->
         <Label Name="lbl_display"  Width="250" Grid.ColumnSpan="5" Background="Black"></Label>
-       
+
 
 
         <Button Click="Verificar_Clik" Name="btn1" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="1">7</Button>
@@ -49,13 +49,13 @@
 
 
         <Button Click="Verificar_Clik"  Name="btn16" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="4">0</Button>
-        <Button Click="Verificar_Clik"  Name="btn17" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="4">+/-</Button>
-        <Button Click="Verificar_Clik"  Name="btn18" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="4">.</Button>
-        <Button Click="Verificar_Clik"  Name="btn19" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="4">=</Button>
-        <Button Click="Verificar_Clik"  Name="btn20" Height="50" Width="50" Background="gray" Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="2">+</Button>
-        
-        
-        
+        <Button Click="Verificar_Clik"  Name="btn17" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="4">.</Button>
+        <Button Click="Verificar_Clik"  Name="btn18" Height="50" Width="50" Background="Blue" Grid.Column="2" Grid.Row="4">+/=</Button>
+        <Button Click="Verificar_Clik"  Name="btn19" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="4">+</Button>
+        <Button Click="Verificar_Clik"  Name="btn20" Width="50" Background="gray" Grid.Column="4" Grid.Row="3" Margin="1,0,2,0" Grid.RowSpan="2" >=</Button>
+
+
+
 
 
 
