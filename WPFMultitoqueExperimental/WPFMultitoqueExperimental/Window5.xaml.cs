@@ -22,6 +22,10 @@ namespace WPFMultitoqueExperimental
         // guardar las imagenes que hayan sido creadas para cada uno de los puntos de toue
         Dictionary<TouchDevice, Image> MarcasGuardadas = new Dictionary<TouchDevice, Image>();
 
+        // guardar las colecciones de puntos para un dispositivo de toque ( el toque de un dedo )
+        Dictionary<TouchDevice, TouchPointCollection> PuntosDibujo = new Dictionary<TouchDevice, TouchPointCollection>();
+
+
         public Window5()
         {
             InitializeComponent();
@@ -32,6 +36,7 @@ namespace WPFMultitoqueExperimental
         protected override void OnTouchDown(TouchEventArgs e)
         {
             base.OnTouchDown(e);
+            TouchPointCollection PuntosToque = new TouchPointCollection();
 
             // capturar el evento de toque para el evento indicado 
             this.cnv1.CaptureTouch(e.TouchDevice);
@@ -43,9 +48,17 @@ namespace WPFMultitoqueExperimental
             TouchPoint PuntoToque = e.GetTouchPoint(this.cnv1);
             MarcaDedo.RenderTransform = new TranslateTransform(PuntoToque.Position.X, PuntoToque.Position.Y);
 
+            /*** agregar el punto de toque a la coleccion ***/
+            PuntosToque.Add(PuntoToque);
+
             // guardar los objetos de toque y agregarlos al canvas 
             this.MarcasGuardadas[e.TouchDevice] = MarcaDedo;
+
+            /*** agregar la coleccion de puntos al diccionario ***/
+            this.PuntosDibujo[e.TouchDevice] = PuntosToque;
+
             this.cnv1.Children.Add(MarcaDedo);
+         
         }
 
         // sobreescribir el metodo touchmove
