@@ -45,13 +45,13 @@ namespace WPFMultitoqueExperimental
 
             // agregar etiqueta al refrigerador 
             Label etiqueta = new Label();
-            etiqueta.Background = new SolidColorBrush(Color.FromArgb( Convert.ToByte( rnd.Next(250)), Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250) )));
-            etiqueta.Foreground = new SolidColorBrush(Color.FromArgb(Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250))));
+            etiqueta.Background = new SolidColorBrush(Color.FromArgb( 250, Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250) )));
+            etiqueta.Foreground = new SolidColorBrush(Color.FromArgb(250, Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250))));
             etiqueta.FontSize = 12;
             etiqueta.FontFamily = new FontFamily("Comic Sans");
 
-            etiqueta.Height = rnd.Next(200);
-            etiqueta.Width = rnd.Next(200);
+            etiqueta.Height = 50;
+            etiqueta.Width = 30;
 
 
             Canv1.Children.Add(etiqueta);
