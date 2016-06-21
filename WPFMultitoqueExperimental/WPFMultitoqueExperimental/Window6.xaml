@@ -30,29 +30,29 @@
        
 
 
-        <Button Name="btn1" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="1">7</Button>
-        <Button Name="btn2" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="1">8</Button>
-        <Button Name="btn3" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="1">9</Button>
-        <Button Name="btn4" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="1">/</Button>
-        <Button Name="btn5" Height="50" Width="50" Background="Blue" Grid.Column="4" Grid.Row="1">C</Button>
+        <Button Click="Verificar_Clik" Name="btn1" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="1">7</Button>
+        <Button Click="Verificar_Clik" Name="btn2" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="1">8</Button>
+        <Button Click="Verificar_Clik" Name="btn3" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="1">9</Button>
+        <Button Click="Verificar_Clik" Name="btn4" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="1">/</Button>
+        <Button Click="Verificar_Clik" Name="btn5" Height="50" Width="50" Background="Blue" Grid.Column="4" Grid.Row="1">C</Button>
 
-        <Button Name="btn6" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="2">4</Button>
-        <Button Name="btn7" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="2">5</Button>
-        <Button Name="btn8" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="2">6</Button>
-        <Button Name="btn9" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="2">*</Button>
-        <Button Name="btn10" Height="50" Width="50" Background="Blue" Grid.Column="4" Grid.Row="2">Raiz</Button>
+        <Button Click="Verificar_Clik"  Name="btn6" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="2">4</Button>
+        <Button Click="Verificar_Clik" Name="btn7" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="2">5</Button>
+        <Button Click="Verificar_Clik"  Name="btn8" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="2">6</Button>
+        <Button Click="Verificar_Clik"  Name="btn9" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="2">*</Button>
+        <Button Click="Verificar_Clik"  Name="btn10" Height="50" Width="50" Background="Blue" Grid.Column="4" Grid.Row="2">Raiz</Button>
 
-        <Button Name="btn11" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="3">1</Button>
-        <Button Name="btn12" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="3">2</Button>
-        <Button Name="btn13" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="3">3</Button>
-        <Button Name="btn14" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="3">-</Button>
+        <Button Click="Verificar_Clik"  Name="btn11" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="3">1</Button>
+        <Button Click="Verificar_Clik"  Name="btn12" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="3">2</Button>
+        <Button Click="Verificar_Clik"  Name="btn13" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="3">3</Button>
+        <Button Click="Verificar_Clik" Name="btn14" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="3">-</Button>
 
 
-        <Button Name="btn16" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="4">0</Button>
-        <Button Name="btn17" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="4">+/-</Button>
-        <Button Name="btn18" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="4">.</Button>
-        <Button Name="btn19" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="4">=</Button>
-        <Button Name="btn20" Height="50" Width="50" Background="gray" Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="2">+</Button>
+        <Button Click="Verificar_Clik"  Name="btn16" Height="50" Width="50" Background="red" Grid.Column="0" Grid.Row="4">0</Button>
+        <Button Click="Verificar_Clik"  Name="btn17" Height="50" Width="50" Background="red" Grid.Column="1" Grid.Row="4">+/-</Button>
+        <Button Click="Verificar_Clik"  Name="btn18" Height="50" Width="50" Background="red" Grid.Column="2" Grid.Row="4">.</Button>
+        <Button Click="Verificar_Clik"  Name="btn19" Height="50" Width="50" Background="blue" Grid.Column="3" Grid.Row="4">=</Button>
+        <Button Click="Verificar_Clik"  Name="btn20" Height="50" Width="50" Background="gray" Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="2">+</Button>
         
         
         
