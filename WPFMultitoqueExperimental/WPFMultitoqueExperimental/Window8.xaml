@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFMultitoqueExperimental"
         mc:Ignorable="d"
-        Title="Window8" Height="300" Width="300">
+        Title="Window8" d:DesignWidth="1143" d:DesignHeight="789" >
 
     <!-- experimento de dibujo con el mouse -->
-    <Canvas MouseEnter="SobreCanvas" Name ="area" Background="White" Margin="19,0,19,17" Height="242" VerticalAlignment="Bottom">
+    <InkCanvas Name ="area" Background="White" MouseUp ="CambiarColor" Margin="14,22,17,15">
+  
 
-    </Canvas>
+    </InkCanvas>
 </Window>
