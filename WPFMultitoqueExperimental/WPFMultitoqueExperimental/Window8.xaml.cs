@@ -64,7 +64,7 @@ namespace WPFMultitoqueExperimental
         // cambiar color aleatoriamente al stroke
         private void CambiarColor ( object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("cambiando color");
+           // MessageBox.Show("cambiando color");
             Random rn = new Random();
 
             // usar las propiedades de dibujo para crear un color nuevo
@@ -72,7 +72,7 @@ namespace WPFMultitoqueExperimental
             AtributosDibujo.Color = Color.FromRgb(Convert.ToByte( rn.Next(255)) ,Convert.ToByte( rn.Next(255) ), Convert.ToByte( rn.Next(255)) );
             area.DefaultDrawingAttributes = AtributosDibujo;
             
-            
+      
         }
 
 

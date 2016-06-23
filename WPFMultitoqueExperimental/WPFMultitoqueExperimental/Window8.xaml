@@ -9,6 +9,7 @@
 
     <!-- experimento de dibujo con el mouse -->
     <InkCanvas Name ="area" Background="White" MouseUp ="CambiarColor" Margin="14,22,17,15">
+        <DockPanel Background="Black" VerticalAlignment="Top"></DockPanel>
   
 
     </InkCanvas>
