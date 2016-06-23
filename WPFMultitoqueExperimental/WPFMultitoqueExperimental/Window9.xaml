@@ -76,5 +76,29 @@
                 </ListBox>
             </StackPanel>
         </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                pestania3
+            </TabItem.Header>
+            <Menu Height="20" VerticalAlignment="Top" Background="Red">
+                <MenuItem Background="Aqua">
+                    <MenuItem.Header>
+                        archivo
+                    </MenuItem.Header>
+                    <MenuItem Header="Copiar"></MenuItem>
+                    <MenuItem Header="borrar"></MenuItem>
+                    <MenuItem Header="pegar"></MenuItem>
+                    <MenuItem Header="cerrar"></MenuItem>
+                </MenuItem>
+                <MenuItem>
+                    <MenuItem.Header>
+                        <AccessText>_Pegar</AccessText>
+                    </MenuItem.Header>
+                    <MenuItem Header="Agregar"></MenuItem>
+                    <MenuItem Header="quitar"></MenuItem>
+                    <MenuItem Header="modificar"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </TabItem>
     </TabControl>
 </Window>
