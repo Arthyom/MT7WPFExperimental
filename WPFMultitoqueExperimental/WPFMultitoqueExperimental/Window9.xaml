@@ -91,6 +91,12 @@
                     <MenuItem Header="cerrar"></MenuItem>
                 </MenuItem>
                 <MenuItem>
+                    <MenuItem.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="top"></MenuItem>
+                            <MenuItem Header="back"></MenuItem>
+                        </ContextMenu>
+                    </MenuItem.ContextMenu>
                     <MenuItem.Header>
                         <AccessText>_Pegar</AccessText>
                     </MenuItem.Header>
