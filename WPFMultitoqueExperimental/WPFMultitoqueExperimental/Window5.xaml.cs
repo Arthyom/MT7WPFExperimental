@@ -22,8 +22,6 @@ namespace WPFMultitoqueExperimental
         // guardar las imagenes que hayan sido creadas para cada uno de los puntos de toue
         Dictionary<TouchDevice, Image> MarcasGuardadas = new Dictionary<TouchDevice, Image>();
 
-        // guardar las colecciones de puntos para un dispositivo de toque ( el toque de un dedo )
-        Dictionary<TouchDevice, TouchPointCollection> PuntosDibujo = new Dictionary<TouchDevice, TouchPointCollection>();
 
 
         public Window5()
@@ -42,7 +40,7 @@ namespace WPFMultitoqueExperimental
             this.cnv1.CaptureTouch(e.TouchDevice);
 
             // crear una nueva imagen para un nuevo toque 
-            Image MarcaDedo = new Image { Source = new BitmapImage( new Uri(@"C:\Users\frodo\Pictures\Nueva carpeta\pencil-icon.png")) };
+            Image MarcaDedo = new Image { Source = new BitmapImage(new Uri(@"C:\Users\frodo\Pictures\Nueva carpeta\pencil-icon.png")) };
 
             // mover la imagen al punto de toque
             TouchPoint PuntoToque = e.GetTouchPoint(this.cnv1);
@@ -55,10 +53,8 @@ namespace WPFMultitoqueExperimental
             this.MarcasGuardadas[e.TouchDevice] = MarcaDedo;
 
             /*** agregar la coleccion de puntos al diccionario ***/
-            this.PuntosDibujo[e.TouchDevice] = PuntosToque;
-
             this.cnv1.Children.Add(MarcaDedo);
-         
+
         }
 
         // sobreescribir el metodo touchmove
@@ -67,7 +63,7 @@ namespace WPFMultitoqueExperimental
             base.OnTouchMove(e);
 
             // ver si se ha tocad el canvas 
-            if ( e.TouchDevice.Captured == this.cnv1)
+            if (e.TouchDevice.Captured == this.cnv1)
             {
                 Image MarcaDedo = this.MarcasGuardadas[e.TouchDevice];
                 TranslateTransform transform =
@@ -77,6 +73,9 @@ namespace WPFMultitoqueExperimental
                 TouchPoint PuntoToque = e.GetTouchPoint(this.cnv1);
                 transform.X = PuntoToque.Position.X;
                 transform.Y = PuntoToque.Position.Y;
+
+
+                
 
             }
         }
@@ -91,6 +90,10 @@ namespace WPFMultitoqueExperimental
             // quitar las imagenes del canvas y del diccionario
             this.cnv1.Children.Remove(this.MarcasGuardadas[e.TouchDevice]);
             this.MarcasGuardadas.Remove(e.TouchDevice);
+
+
+
+
         }
     }
 }

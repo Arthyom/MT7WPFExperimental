@@ -1,0 +1,51 @@
+﻿<Window x:Class="WPFMultitoqueExperimental.Window10"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMultitoqueExperimental"
+        mc:Ignorable="d"
+        Title="Window10" Height="562" Width="884">
+    <!-- 
+        prueba de aplicaciones multitactiles y controles varios
+        del WPF
+    -->
+    <Grid Background="Gray">
+        <TabControl Name="tab1" Background="Black">
+            <TabItem TabIndex="1">
+                <DockPanel Margin="10,0,0,-2" Height="495" VerticalAlignment="Top" HorizontalAlignment="Left" Width="840">
+                    <Canvas  Name="c1" Width="813" Margin="0,10" Background="White"></Canvas>
+                </DockPanel>
+                <TabItem.Header>Dibujo</TabItem.Header>
+            </TabItem>
+
+            <TabItem TabIndex="2">
+                <TabItem.Header>Refigerador</TabItem.Header>
+                <Image  Name="Refri" Source="C:\Users\frodo\Pictures\WD6575S.jpg"></Image>
+            </TabItem>
+
+            <TabItem TabIndex="3">
+                <TabItem.Header>Ruleta</TabItem.Header>
+            </TabItem>
+
+            <TabItem TabIndex="4">
+                <TabItem.Header>Fotos</TabItem.Header>
+                <Canvas Name="cnvsimg" Background="White" IsManipulationEnabled="True">
+                    <Image Name="Imagen2" Source="C:\Users\frodo\Pictures\81079_main_full.png" Width="255" Height="200" Canvas.Left="397" Canvas.Top="150">
+                        <Image.RenderTransform>
+                            <MatrixTransform></MatrixTransform>
+                        </Image.RenderTransform>
+                    </Image>
+                    
+                    <Image  Name="Imagen1" Source="C:\Users\frodo\Pictures\10059.png" Height="265" Width="292">
+                        <Image.RenderTransform>
+                            <MatrixTransform></MatrixTransform>
+                        </Image.RenderTransform>
+                    </Image>
+
+                </Canvas>
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
