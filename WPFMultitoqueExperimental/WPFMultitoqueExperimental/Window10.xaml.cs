@@ -29,8 +29,9 @@ namespace WPFMultitoqueExperimental
         protected override void OnTouchDown(TouchEventArgs e)
         {
             base.OnTouchDown(e);
-           // this.cnvsimg.ManipulationDelta += Canvas_ManipulationDelta;
+            this.cnvsimg.ManipulationDelta += Canvas_ManipulationDelta;
             this.cnvsimg.ManipulationDelta += Canvas_ManipulationDelta2;
+            this.cnvsimg.ManipulationInertiaStarting += Canvas_ManipulationInertiaStarting;
 
 
 
@@ -78,6 +79,13 @@ namespace WPFMultitoqueExperimental
                 transform.Matrix = matrix;
                 e.Handled = true;
             }
+        }
+
+        void Canvas_ManipulationInertiaStarting(object sender,ManipulationInertiaStartingEventArgs e)
+        {
+            e.TranslationBehavior.DesiredDeceleration = 0.01;
+            e.RotationBehavior.DesiredDeceleration = 0.01;
+            e.ExpansionBehavior.DesiredDeceleration = 0.01;
         }
 
 

@@ -14,7 +14,7 @@
         <TabControl Name="tab1" Background="Black">
             <TabItem TabIndex="1">
                 <DockPanel Margin="10,0,0,-2" Height="495" VerticalAlignment="Top" HorizontalAlignment="Left" Width="840">
-                    <Canvas  Name="c1" Width="813" Margin="0,10" Background="White"></Canvas>
+                    <Canvas  Name="c1" Width="813" Margin="0,10" Background="White" IsManipulationEnabled="True"></Canvas>
                 </DockPanel>
                 <TabItem.Header>Dibujo</TabItem.Header>
             </TabItem>
