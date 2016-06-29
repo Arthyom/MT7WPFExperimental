@@ -18,7 +18,7 @@ namespace WPFMultitoqueExperimental
     /// </summary>
     public partial class Window12 : Window
     {
-        Point PuntoActual = new Point;
+        Point PuntoActual = new Point();
 
         public Window12()
         {
@@ -29,11 +29,39 @@ namespace WPFMultitoqueExperimental
         void RatonPrecionado_MouseDown ( object sender, MouseButtonEventArgs e)
         {
             // verificar si esta precionado el raton 
-            if ( MouseButtonState.Pressed == e.ButtonState)
+            if ( e.ButtonState == MouseButtonState.Pressed)
             {
-                PuntoActual = e.GetPosition(CanvasDibujo);
+                this.PuntoActual = e.GetPosition(CanvasDibujo);
                 CanvasDibujo.Cursor = Cursors.Cross;
             }
+        }
+
+        void RatonMoviendo_MouseMove ( object sender, MouseEventArgs e)
+        {
+            if ( e.LeftButton == MouseButtonState.Pressed)
+            {
+                Line lin = new Line();
+
+                lin.Stroke = Brushes.Red;
+
+                lin.X1 = this.PuntoActual.X;
+                lin.Y1 = this.PuntoActual.Y;
+
+                Point PuntoMov = e.GetPosition(CanvasDibujo);
+
+                lin.X2 = PuntoMov.X;
+                lin.Y2 = PuntoMov.Y;
+
+                this.PuntoActual = e.GetPosition(CanvasDibujo);
+
+                CanvasDibujo.Children.Add(lin);
+
+            }
+        }
+
+        private void ArchivoBorrar_Click(object sender, RoutedEventArgs e)
+        {
+            CanvasDibujo.Children.Clear();
         }
     }
 }

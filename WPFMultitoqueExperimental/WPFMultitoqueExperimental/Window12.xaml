@@ -18,7 +18,7 @@
         <Menu Background="Gray" Name="Menu" >
             <MenuItem Name="Archivo">
                 <MenuItem.Header>Dibujo</MenuItem.Header>
-                <MenuItem Name="ArchivoBorrar">
+                <MenuItem Name="ArchivoBorrar" Click="ArchivoBorrar_Click">
                     <MenuItem.Header>Borrar</MenuItem.Header>
                 </MenuItem>
             </MenuItem>
@@ -30,7 +30,9 @@
             </MenuItem>
         </Menu>
 
-        <Canvas Grid.Row="1" Name="CanvasDibujo" Margin="10,0,10,10" Background="White"></Canvas>
+        <Canvas Grid.Row="1"  IsManipulationEnabled="True" Name="CanvasDibujo" Margin="10,0,10,10" Background="White" MouseDown="RatonPrecionado_MouseDown" MouseMove="RatonMoviendo_MouseMove">
+            
+        </Canvas>
 
     </Grid>
 </Window>
