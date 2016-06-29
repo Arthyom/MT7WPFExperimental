@@ -41,6 +41,7 @@ namespace WPFMultitoqueExperimental
             if ( e.LeftButton == MouseButtonState.Pressed)
             {
                 Line lin = new Line();
+                lin.Width = GrosorSliderGrosor.Value;
 
                 lin.Stroke = Brushes.Red;
 

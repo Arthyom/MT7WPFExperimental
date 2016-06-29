@@ -28,6 +28,18 @@
             <MenuItem Name="Cerrar">
                 <MenuItem.Header>Cerrar</MenuItem.Header>
             </MenuItem>
+            <MenuItem Width="48">
+                <MenuItem.Header>Grosor</MenuItem.Header>
+                <Slider Name="GrosorSliderGrosor" Value="3" Minimum="3" Maximum="20"  Width="100"></Slider>
+            </MenuItem>
+
+            <MenuItem>
+                <MenuItem.Header>Color</MenuItem.Header>
+                <CheckBox>Rojo</CheckBox>
+                <CheckBox>Negro</CheckBox>
+                <CheckBox>Amarillo</CheckBox>
+                <CheckBox>Verde</CheckBox>
+            </MenuItem>
         </Menu>
 
         <Canvas Grid.Row="1"  IsManipulationEnabled="True" Name="CanvasDibujo" Margin="10,0,10,10" Background="White" MouseDown="RatonPrecionado_MouseDown" MouseMove="RatonMoviendo_MouseMove">
