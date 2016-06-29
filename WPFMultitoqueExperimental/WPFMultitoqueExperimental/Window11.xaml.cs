@@ -47,7 +47,10 @@ namespace WPFMultitoqueExperimental
         private void Canvas_MouseDown_1(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             if (e.ButtonState == MouseButtonState.Pressed)
+            {
                 currentPoint = e.GetPosition(CanvasTouch);
+                CanvasTouch.Cursor = Cursors.Cross;
+            }
         }
 
         private void Canvas_MouseMove_1(object sender, System.Windows.Input.MouseEventArgs e)
