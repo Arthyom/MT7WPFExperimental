@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace WPFMultitoqueExperimental
 {
     /// <summary>
@@ -19,31 +20,33 @@ namespace WPFMultitoqueExperimental
     public partial class Window12 : Window
     {
         Point PuntoActual = new Point();
+        Brush ColorPluma;
 
         public Window12()
         {
             InitializeComponent();
+            this.DefinirColor();
         }
 
         // definir metodo de precionado 
-        void RatonPrecionado_MouseDown ( object sender, MouseButtonEventArgs e)
+        void RatonPrecionado_MouseDown(object sender, MouseButtonEventArgs e)
         {
             // verificar si esta precionado el raton 
-            if ( e.ButtonState == MouseButtonState.Pressed)
+            if (e.ButtonState == MouseButtonState.Pressed)
             {
                 this.PuntoActual = e.GetPosition(CanvasDibujo);
                 CanvasDibujo.Cursor = Cursors.Cross;
+                DefinirColor();
             }
         }
 
-        void RatonMoviendo_MouseMove ( object sender, MouseEventArgs e)
+        void RatonMoviendo_MouseMove(object sender, MouseEventArgs e)
         {
-            if ( e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 Line lin = new Line();
-                lin.Width = GrosorSliderGrosor.Value;
-
-                lin.Stroke = Brushes.Red;
+                lin.StrokeThickness = GrosorSliderGrosor.Value;
+                lin.Stroke = this.ColorPluma;
 
                 lin.X1 = this.PuntoActual.X;
                 lin.Y1 = this.PuntoActual.Y;
@@ -64,5 +67,32 @@ namespace WPFMultitoqueExperimental
         {
             CanvasDibujo.Children.Clear();
         }
+
+        void DefinirColor()
+        {
+            if (rdA.IsChecked == true)
+                this.ColorPluma = Brushes.Yellow;
+            else
+            {
+                if (rdN.IsChecked == true)
+                    this.ColorPluma = Brushes.Red;
+                else
+                    if (rdR.IsChecked == true)
+                    this.ColorPluma = Brushes.Red;
+                else
+                    if (rdV.IsChecked == true)
+                    this.ColorPluma = Brushes.Green;
+            }
+
+        }
+
+        void Salir(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult Res = MessageBox.Show("wpf", "Desea Salir", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (Res == MessageBoxResult.Yes)
+                this.Close();
+
+        }
     }
+
 }

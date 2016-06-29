@@ -27,18 +27,21 @@
             </MenuItem>
             <MenuItem Name="Cerrar">
                 <MenuItem.Header>Cerrar</MenuItem.Header>
+                <MenuItem Name="CerrarSalir" Click="Salir">
+                    <MenuItem.Header>Salir</MenuItem.Header>
+                </MenuItem>
             </MenuItem>
             <MenuItem Width="48">
                 <MenuItem.Header>Grosor</MenuItem.Header>
-                <Slider Name="GrosorSliderGrosor" Value="3" Minimum="3" Maximum="20"  Width="100"></Slider>
+                <Slider Name="GrosorSliderGrosor" Value="0.1" Minimum="0.1" Maximum="20"  Width="100"></Slider>
             </MenuItem>
 
             <MenuItem>
                 <MenuItem.Header>Color</MenuItem.Header>
-                <CheckBox>Rojo</CheckBox>
-                <CheckBox>Negro</CheckBox>
-                <CheckBox>Amarillo</CheckBox>
-                <CheckBox>Verde</CheckBox>
+                <RadioButton Name="rdR" IsChecked="True">Rojo</RadioButton>
+                <RadioButton Name="rdN">Negro</RadioButton>
+                <RadioButton Name="rdA">Amarillo</RadioButton>
+                <RadioButton Name="rdV">Verde</RadioButton>
             </MenuItem>
         </Menu>
 
