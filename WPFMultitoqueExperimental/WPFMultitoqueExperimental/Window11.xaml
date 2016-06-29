@@ -9,7 +9,7 @@
         Background="Gray"
         >
     <Grid>
-        <Canvas Name="CanvasTouch" Margin="10,0,10,10" Background="White" IsManipulationEnabled="False" MouseDown="PrecionarRaton_MouseDown" Mouse.MouseMove="MoverRaton_MouseMove"></Canvas>
+        <Canvas Name="CanvasTouch" Margin="10,0,10,10" Background="White" IsManipulationEnabled="False" MouseDown="Canvas_MouseDown_1" Mouse.MouseMove="Canvas_MouseMove_1"></Canvas>
         
     </Grid>
 </Window>
