@@ -19,7 +19,11 @@ namespace WPFMultitoqueExperimental
     /// </summary>
     public partial class Window12 : Window
     {
+        Dictionary<TouchDevice, Line> Dibujo = new Dictionary<TouchDevice, Line>();
+        Dictionary<TouchDevice, TouchPointCollection> ConjuntoPuntos  = new Dictionary<TouchDevice, TouchPointCollection>();
+
         Point PuntoActual = new Point();
+        TouchPoint PuntoToqueActual;
         Brush ColorPluma;
 
         public Window12()
@@ -93,6 +97,71 @@ namespace WPFMultitoqueExperimental
                 this.Close();
 
         }
-    }
 
+        protected override void OnTouchDown(TouchEventArgs e)
+        {
+            base.OnTouchDown(e);
+            // capturar el evento de toque para el evento indicado 
+            this.CanvasDibujo.CaptureTouch(e.TouchDevice);
+
+            Random R = new Random();
+
+            // crear una nueva linea 
+            Line LineToque = new Line();
+            LineToque.StrokeThickness = R.Next(5);
+            LineToque.Stroke = new SolidColorBrush(Color.FromRgb(Convert.ToByte(R.Next(255)), Convert.ToByte(R.Next(255)), Convert.ToByte(R.Next(255))));
+
+            // conseguir el punto de toque 
+            this.PuntoToqueActual = e.GetTouchPoint(this.CanvasDibujo);
+
+
+            // agregar el punto de toque a la coleccion de puntos 
+           this.CanvasDibujo.
+
+            // agregar la linea al diccionario 
+            this.Dibujo[e.TouchDevice] = LineToque;
+            
+
+
+        }
+
+
+
+        // sobreescribir el metodo touchmove
+        protected override void OnTouchMove(TouchEventArgs e)
+        {
+            base.OnTouchMove(e);
+            try
+            {
+                // ver si se ha tocad el canvas 
+                if (e.TouchDevice.Captured == this.CanvasDibujo)
+                {
+                    Line LineToque = this.Dibujo[e.TouchDevice];
+                   
+
+                    // agregar coordenas del punto de toque actual a la linea  
+                    LineToque.X1 = PuntoToqueActual.Position.X;
+                    LineToque.Y1 = PuntoToqueActual.Position.Y;
+
+                    LineToque.X2 = e.GetTouchPoint(this.CanvasDibujo).Position.X;
+                    LineToque.Y2 = e.GetTouchPoint(this.CanvasDibujo).Position.Y;
+
+                    // convertir el punto actual 
+                    this.PuntoToqueActual = e.GetTouchPoint(this.CanvasDibujo);
+
+                    //agregar al canvas de dibujo 
+                    this.CanvasDibujo.Children.Add(LineToque);
+                }
+
+            }
+            catch(Exception exp)
+            {
+                int i = 0;
+            }
+
+            
+        }
+
+  
+    }
 }
