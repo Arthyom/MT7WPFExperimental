@@ -36,8 +36,27 @@ namespace WPFMultitoqueExperimental
 
         }
 
+        void Borrar(object sender, RoutedEventArgs e)
+        {
+            this.cnvs1.Children.Clear();
+        }
+
         void DibujarLinea (object sender, RoutedEventArgs e)
         {
+            Line NuevaLinea = new Line();
+
+            NuevaLinea.X1 = this.Generador.Next(Convert.ToInt32(255));
+            NuevaLinea.Y1 = this.Generador.Next(Convert.ToInt32(300));
+
+            NuevaLinea.X2 = this.Generador.Next(Convert.ToInt32(200));
+            NuevaLinea.Y2 = this.Generador.Next(Convert.ToInt32(400));
+
+            NuevaLinea.StrokeThickness = this.Generador.Next(10);
+            NuevaLinea.Stroke = Brushes.Red;
+
+            this.cnvs1.Children.Add(NuevaLinea);
+
+
 
         }
 

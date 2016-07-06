@@ -17,12 +17,12 @@
 
         <ToolBar Name="Tbar1" Background="Red" >
             <StackPanel Orientation="Horizontal">
-                <Button Name="btn1" Width="30">
+                <Button Name="btn1" Width="30" Click="DibujarLinea">
                     <Viewbox>
                         <Line Stroke="Red" X1="0" Y1="0" X2="50" Y2="50" StrokeThickness="10"></Line>
                     </Viewbox>
                 </Button>
-                <Button Name="btn2" Width="30">
+                <Button Name="btn2" Width="30" Click="btn2_Click">
                     <Viewbox>
                         <Rectangle Height="30" Width="20" Fill="Green"></Rectangle>
                     </Viewbox>
