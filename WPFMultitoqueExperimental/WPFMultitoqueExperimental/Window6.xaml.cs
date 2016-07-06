@@ -52,6 +52,7 @@ namespace WPFMultitoqueExperimental
             string CadenaDisp = lbl_display.Content.ToString();
            // MessageBox.Show(ObjetoClik.ToString());
 
+            /*
             try
             {
                 if ( ObjetoClik.Background == Brushes.Red ) 
@@ -63,8 +64,8 @@ namespace WPFMultitoqueExperimental
             catch( Exception exp )
             {
                 
-                int i = 0;
-            }
+                
+            }*/
 
            
         }

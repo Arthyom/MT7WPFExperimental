@@ -116,7 +116,7 @@ namespace WPFMultitoqueExperimental
 
 
             // agregar el punto de toque a la coleccion de puntos 
-           this.CanvasDibujo.
+          // this.CanvasDibujo.
 
             // agregar la linea al diccionario 
             this.Dibujo[e.TouchDevice] = LineToque;
