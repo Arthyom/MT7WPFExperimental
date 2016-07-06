@@ -18,9 +18,32 @@ namespace WPFMultitoqueExperimental
     /// </summary>
     public partial class Window13 : Window
     {
+        Random Generador = new Random();
+
         public Window13()
         {
             InitializeComponent();
+
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        void DibujarRectangulo (object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        void DibujarLinea (object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        void DibujarTriangulo (object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
