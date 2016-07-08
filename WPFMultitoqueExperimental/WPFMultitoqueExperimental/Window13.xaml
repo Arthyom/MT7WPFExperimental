@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFMultitoqueExperimental"
         mc:Ignorable="d"
-        Title="Window13" Height="300" Width="300"
+        Title="Window13" Height="347" Width="484"
         Background="Black"
         >
     <Grid>
@@ -27,26 +27,48 @@
                         <Rectangle Height="30" Width="20" Fill="Green"></Rectangle>
                     </Viewbox>
                 </Button>
-                <Button Name="btn3" Width="30" Click="DibujarTriangulo">
+                <Button Name="btn3" Width="30" Click="DibujarCirculo">
                     <Ellipse Height="20" Width="20" Fill="Yellow"></Ellipse>
                 </Button>
-                
-                <Button Name="btn4" Width="30" Click="DibujarRectangulo">
+
+                <Button Name="btn4" Width="30" Click="DibujarTriangulo">
                     <Viewbox>
                         <Polygon Points="0,0,20,0,20,20" Fill="Blue"></Polygon>
                     </Viewbox>
                 </Button>
-                <Button Name="btn10" Width="30">
+                <Button Name="btn10" Width="30" Click="DibujarPoligono">
                     <Polygon Points="0,0, 10,0 23,10 20,10 14,30" Fill="Purple"></Polygon>
                 </Button>
-                
+                <Button Name="btn20" Width="30" Click="DibujarPoly">
+                    <Polygon Points="0,0, 10,0 23,10 20,10 14,30" Fill="White"></Polygon>
+                </Button>
+
                 <Separator Width="25" Background="Transparent"></Separator>
-                
+
                 <Button Name="btn5" Width="30">
                     <Image Source="C:\Users\frodo\Pictures\Nueva carpeta\pencil-icon.png"></Image>
                 </Button>
-                <Button Name="btn6" Width="30" Click="Borrar">
+                <Button Name="btn6" Width="40" Click="Borrar">
                     Borra
+                </Button>
+                <Button Name="btn7" Width="30" Click="DibujarGeom">
+                    <Viewbox>
+                        <Path Stroke="Black" Fill="Pink">
+                            <Path.Data>
+                                <CombinedGeometry>
+                                    
+                                    <CombinedGeometry.Geometry1>
+                                        <EllipseGeometry Center="10,10" RadiusX="10" RadiusY="10"/>
+                                    </CombinedGeometry.Geometry1>
+           
+                                    <CombinedGeometry.Geometry2>
+                                        <EllipseGeometry Center="10,30" RadiusX="10" RadiusY="20"/>
+                                    </CombinedGeometry.Geometry2>
+                                    
+                                </CombinedGeometry>
+                            </Path.Data>
+                        </Path>
+                    </Viewbox>
                 </Button>
 
 
@@ -54,7 +76,7 @@
         </ToolBar>
 
         <Canvas Name="cnvs1" Grid.Row="1" Background="White" Margin="10,0,10,10" >
-            
+
         </Canvas>
 
     </Grid>
