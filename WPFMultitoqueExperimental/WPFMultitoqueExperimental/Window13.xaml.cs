@@ -62,7 +62,38 @@ namespace WPFMultitoqueExperimental
 
         void DibujarTriangulo (object sender, RoutedEventArgs e)
         {
+            Polygon Poligon = new Polygon();
+
+            Poligon.Fill = Brushes.Yellow;
+            Poligon.Stroke = Brushes.Green;
+            Poligon.StrokeThickness = this.Generador.Next(20);
+
+            Point p1 = new Point();
+            Point p2 = new Point();
+            Point p3 = new Point();
+
+            p1.X = Convert.ToInt32(this.Generador.Next(255));
+            p1.Y = Convert.ToInt32(this.Generador.Next(255));
+
+            p2.X = Convert.ToInt32(this.Generador.Next(255));
+            p2.Y = Convert.ToInt32(this.Generador.Next(255));
+
+            p3.X = Convert.ToInt32(this.Generador.Next(255));
+            p3.Y = Convert.ToInt32(this.Generador.Next(255));
+
+            Poligon.Points.Add(p1);
+            Poligon.Points.Add(p2);
+            Poligon.Points.Add(p3);
+
+            this.cnvs1.Children.Add(Poligon);
+
 
         }
+
+        void DibujarCirculo (object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
