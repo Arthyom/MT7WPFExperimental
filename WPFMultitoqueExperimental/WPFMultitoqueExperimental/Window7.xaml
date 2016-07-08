@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Window7" Height="512" Width="294" Loaded="Window_Loaded">
     <Canvas Name="Canv1">
-        <Image Source="C:\Users\frodo\Pictures\WD6575S.jpg" MouseDown="Click_MouseClik" MouseEnter="Seleccion_MouseInto"></Image>
+        <Image Name="Ref" Source="C:\Users\frodo\Pictures\WD6575S.jpg" MouseDown="Click_MouseClik" MouseEnter="Seleccion_MouseInto"></Image>
     </Canvas>
 </Window>

@@ -40,21 +40,31 @@ namespace WPFMultitoqueExperimental
 
         private void Click_MouseClik ( object sender, MouseButtonEventArgs e)
         {
-            Random rnd = new Random();
+            Random Rd = new Random();
 
+            /// conseguir las coordernadas del clik
+            Point PuntoClick = e.GetPosition(this.Ref);
 
-            // agregar etiqueta al refrigerador 
-            Label etiqueta = new Label();
-            etiqueta.Background = new SolidColorBrush(Color.FromArgb( 250, Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250) )));
-            etiqueta.Foreground = new SolidColorBrush(Color.FromArgb(250, Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250)), Convert.ToByte(rnd.Next(250))));
-            etiqueta.FontSize = 12;
-            etiqueta.FontFamily = new FontFamily("Comic Sans");
+            // convertir numeros
+            byte a = Convert.ToByte(Rd.Next(60,255));
+            byte r = Convert.ToByte(Rd.Next(255));
+            byte g = Convert.ToByte(Rd.Next(255));
+            byte b = Convert.ToByte(Rd.Next(255));
 
-            etiqueta.Height = 50;
-            etiqueta.Width = 30;
+            // crear una etiqueta 
+            Rectangle Etiqueta = new Rectangle();
+            Etiqueta.RadiusX = 5;
+            Etiqueta.RadiusY = 5;
+            Etiqueta.Stroke = new SolidColorBrush( Color.FromArgb(a, r, g, b));
+            Etiqueta.Fill = new SolidColorBrush(Color.FromArgb(a, r, g, b));
+            Etiqueta.StrokeThickness = 2;
+            Etiqueta.Height = Rd.Next(20,40);
+            Etiqueta.Width = Rd.Next(30,70);
 
+            // hacer la traslacion
+            Etiqueta.RenderTransform = new TranslateTransform(PuntoClick.X, PuntoClick.Y);
 
-            Canv1.Children.Add(etiqueta);
+            Canv1.Children.Add(Etiqueta);
 
         }
 
